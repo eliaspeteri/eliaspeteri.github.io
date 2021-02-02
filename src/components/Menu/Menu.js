@@ -7,17 +7,38 @@ const Menu = ({ open, setOpen, ...props }) => {
     const tabIndex = isHidden ? 0 : -1;
 
     return (
-        <StyledMenu open={open} aria-hidden={!isHidden} {...props}>
-            <button onClick={props.home} tabIndex={tabIndex}>
+        <StyledMenu
+            data-testid="menuComponent"
+            open={open}
+            aria-hidden={!isHidden}
+            {...props}
+        >
+            <button
+                data-testid="homeBtn"
+                onClick={props.home}
+                tabIndex={tabIndex}
+            >
                 Home
             </button>
-            <button onClick={props.about} tabIndex={tabIndex}>
+            <button
+                data-testid="aboutBtn"
+                onClick={props.about}
+                tabIndex={tabIndex}
+            >
                 About
             </button>
-            <button onClick={props.portfolio} tabIndex={tabIndex}>
+            <button
+                data-testid="portfolioBtn"
+                onClick={props.portfolio}
+                tabIndex={tabIndex}
+            >
                 Portfolio
             </button>
-            <button onClick={props.contact} tabIndex={tabIndex}>
+            <button
+                data-testid="contactBtn"
+                onClick={props.contact}
+                tabIndex={tabIndex}
+            >
                 Contact
             </button>
         </StyledMenu>

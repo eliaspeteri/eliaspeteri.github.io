@@ -1,8 +1,8 @@
 import { StyledAbout } from "./About.styled";
 
-const About = ({ open, setOpen, ...props }) => {
+const About = () => {
     return (
-        <StyledAbout>
+        <StyledAbout data-testid="aboutComponent">
             <div>
                 <h2>About me</h2>
                 <p>

@@ -3,11 +3,19 @@ import { StyledNavbar } from "./Navbar.styled";
 
 const Navbar = (props) => {
     return (
-        <StyledNavbar>
-            <button onClick={props.home}>Home</button>
-            <button onClick={props.about}>About</button>
-            <button onClick={props.portfolio}>Portfolio</button>
-            <button onClick={props.contact}>Contact</button>
+        <StyledNavbar data-testid="navComponent">
+            <button data-testid="homeBtn" onClick={props.home}>
+                Home
+            </button>
+            <button data-testid="aboutBtn" onClick={props.about}>
+                About
+            </button>
+            <button data-testid="portfolioBtn" onClick={props.portfolio}>
+                Portfolio
+            </button>
+            <button data-testid="contactBtn" onClick={props.contact}>
+                Contact
+            </button>
         </StyledNavbar>
     );
 };

@@ -7,6 +7,7 @@ const Burger = ({ open, setOpen, ...props }) => {
 
     return (
         <StyledBurger
+            data-testid="burgerComponent"
             aria-label="Toggle menu"
             aria-expanded={isExpanded}
             open={open}

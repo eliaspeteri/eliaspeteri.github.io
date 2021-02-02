@@ -1,7 +1,7 @@
 import { StyledContact } from "./Contact.styled";
 const Contact = () => {
     return (
-        <StyledContact>
+        <StyledContact data-testid="contactComponent">
             <div class="grid-container">
                 {/* <div class="grid-item">
                     <img src="./portrait.png" alt="portrait"></img>
