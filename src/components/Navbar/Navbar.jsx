@@ -4,10 +4,10 @@ import { StyledNavbar } from "./Navbar.styled";
 const Navbar = (props) => {
     return (
         <StyledNavbar>
-            <button onClick={props.homeVisibility}>Home</button>
-            <button onClick={props.aboutVisibility}>About</button>
-            <button onClick={props.portfolioVisibility}>Portfolio</button>
-            <button onClick={props.contactVisibility}>Contact</button>
+            <button onClick={props.home}>Home</button>
+            <button onClick={props.about}>About</button>
+            <button onClick={props.portfolio}>Portfolio</button>
+            <button onClick={props.contact}>Contact</button>
         </StyledNavbar>
     );
 };

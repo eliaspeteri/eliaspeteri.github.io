@@ -1,5 +1,5 @@
 import { StyledPortfolio } from "./Portfolio.styled";
 const Portfolio = ({ open, setOpen, ...props }) => {
-    return <p>Coming Soon...</p>;
+    return <StyledPortfolio>Coming Soon...</StyledPortfolio>;
 };
 export default Portfolio;

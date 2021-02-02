@@ -1,4 +1,5 @@
 import { StyledAbout } from "./About.styled";
+
 const About = ({ open, setOpen, ...props }) => {
     return (
         <StyledAbout>
@@ -34,7 +35,8 @@ const About = ({ open, setOpen, ...props }) => {
                             </div>
                             <div class="grid-item">
                                 <h4>Miscellaneous</h4>
-                                Software production, DevOps, Git(Hub).
+                                Software production, DevOps, Git(Hub), Linux
+                                (Redhat).
                             </div>
                         </div>
                     </div>

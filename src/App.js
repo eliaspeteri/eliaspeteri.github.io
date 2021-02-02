@@ -61,10 +61,10 @@ function App() {
             <>
                 <GlobalStyles />
                 <Navbar
-                    homeVisibility={handleHomeVisibility}
-                    aboutVisibility={handleAboutVisibility}
-                    portfolioVisibility={handlePortfolioVisibility}
-                    contactVisibility={handleContactVisibility}
+                    home={handleHomeVisibility}
+                    about={handleAboutVisibility}
+                    portfolio={handlePortfolioVisibility}
+                    contact={handleContactVisibility}
                 />
                 {window.screen.availWidth <= theme.mobileInt ? (
                     <div ref={node}>
@@ -76,6 +76,10 @@ function App() {
                             />
                             <Menu
                                 open={burgerOpen}
+                                home={handleHomeVisibility}
+                                about={handleAboutVisibility}
+                                portfolio={handlePortfolioVisibility}
+                                contact={handleContactVisibility}
                                 setOpen={setBurgerOpen}
                                 id={menuId}
                             />
