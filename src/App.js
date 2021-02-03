@@ -1,5 +1,4 @@
 import React, { useRef, useState } from "react";
-import ReactDOM from "react-dom";
 import { ThemeProvider } from "styled-components";
 import { useOnClickOutside } from "./hooks";
 import { GlobalStyles } from "./global";

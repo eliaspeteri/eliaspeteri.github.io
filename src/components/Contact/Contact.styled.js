@@ -9,4 +9,15 @@ export const StyledContact = styled.p`
     a {
         color: ${({ theme }) => theme.primaryLight};
     }
+    p {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    img {
+        background-position: center center;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        width: auto;
+        height: 12rem;
+    }
 `;

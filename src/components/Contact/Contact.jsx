@@ -1,11 +1,12 @@
 import { StyledContact } from "./Contact.styled";
+import portrait from "./portrait.png";
 const Contact = () => {
     return (
         <StyledContact data-testid="contactComponent">
             <div class="grid-container">
-                {/* <div class="grid-item">
-                    <img src="./portrait.png" alt="portrait"></img>
-                </div> */}
+                <div class="grid-item">
+                    <img src={portrait} alt="portrait"></img>
+                </div>
                 <div class="grid-item">
                     <h2>Contact information</h2>
                     <p>

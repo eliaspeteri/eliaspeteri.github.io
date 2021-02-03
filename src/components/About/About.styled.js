@@ -5,8 +5,10 @@ export const StyledAbout = styled.div`
         grid-template-columns: auto auto;
         display: inline-grid;
     }
-    margin-left: 2rem;
-    margin-right: 2rem;
+    .grid-item {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
     a {
         color: ${({ theme }) => theme.primaryLight};
     }
