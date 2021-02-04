@@ -5,8 +5,7 @@ export const StyledPortfolio = styled.div`
         display: inline-grid;
     }
     .grid-item {
-        padding-left: 1rem;
-        padding-right: 1rem;
+        padding: 1rem;
     }
     a {
         color: ${({ theme }) => theme.primaryLight};

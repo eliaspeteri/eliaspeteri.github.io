@@ -34,6 +34,24 @@ const Portfolio = () => {
                     >
                         THL-Corona
                     </a>
+                    <a
+                        href="https://github.com/eliaspeteri/taximap"
+                        class="grid-item"
+                    >
+                        Taximap
+                    </a>
+                    <a
+                        href="https://github.com/eliaspeteri/mandelbrot"
+                        class="grid-item"
+                    >
+                        Mandelbrot
+                    </a>
+                    <a
+                        href="https://github.com/eliaspeteri/boid"
+                        class="grid-item"
+                    >
+                        Boid simulation
+                    </a>
                 </div>
             ) : null}
             <h2 onClick={handleEasyVisibility}>Easy projects</h2>
