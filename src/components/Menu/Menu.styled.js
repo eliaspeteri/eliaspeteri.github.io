@@ -14,7 +14,7 @@ export const StyledMenu = styled.nav`
     left: 0;
     transition: transform 0.3s ease-in-out;
     @media (max-width: ${({ theme }) => theme.mobile}) {
-        width: 100%;
+        width: 75%;
     }
     button {
         background: transparent;

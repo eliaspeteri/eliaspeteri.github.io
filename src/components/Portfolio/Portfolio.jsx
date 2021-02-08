@@ -19,51 +19,55 @@ const Portfolio = () => {
     // };
     return (
         <StyledPortfolio open={easyOpen} data-testid="portfolioComponent">
-            <h2 onClick={handleGitHubVisibility}>GitHub</h2>
+            <h2 onClick={handleGitHubVisibility} data-testid="githubElement">
+                GitHub
+            </h2>
             {gitHubOpen ? (
-                <div class="grid-container">
+                <div className="grid-container">
                     <a
                         href="https://github.com/eliaspeteri/notes"
-                        class="grid-item"
+                        className="grid-item"
                     >
                         Notes
                     </a>
                     <a
                         href="https://github.com/eliaspeteri/THL-Corona"
-                        class="grid-item"
+                        className="grid-item"
                     >
                         THL-Corona
                     </a>
                     <a
                         href="https://github.com/eliaspeteri/taximap"
-                        class="grid-item"
+                        className="grid-item"
                     >
                         Taximap
                     </a>
                     <a
                         href="https://github.com/eliaspeteri/mandelbrot"
-                        class="grid-item"
+                        className="grid-item"
                     >
                         Mandelbrot
                     </a>
                     <a
                         href="https://github.com/eliaspeteri/boid"
-                        class="grid-item"
+                        className="grid-item"
                     >
                         Boid simulation
                     </a>
                 </div>
             ) : null}
-            <h2 onClick={handleEasyVisibility}>Easy projects</h2>
+            <h2 onClick={handleEasyVisibility} data-testid="easyProjElement">
+                Easy projects
+            </h2>
             {easyOpen ? (
-                <div class="grid-container">
-                    <div class="grid-item">
+                <div className="grid-container">
+                    <div className="grid-item">
                         <FindPitoNth />
                     </div>
-                    <div class="grid-item">
+                    <div className="grid-item">
                         <FindetoNth />
                     </div>
-                    <div class="grid-item">
+                    <div className="grid-item">
                         <Collatz />
                     </div>
                     {/* <div class="grid-item">

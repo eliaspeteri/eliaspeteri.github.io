@@ -1,5 +1,4 @@
 import { createGlobalStyle } from "styled-components";
-
 export const GlobalStyles = createGlobalStyle`
   html, body {
     margin: 0;
@@ -36,6 +35,14 @@ export const GlobalStyles = createGlobalStyle`
     text-decoration: none;
   }
   footer {
-  font-style:italic;
+    position:fixed;
+    bottom:0px;
+    right:1rem;
+    font-style:italic;
+  }
+  #darkModeSwitch {
+    position:absolute;
+    top:0px;
+    right:0px;
   }
 `;

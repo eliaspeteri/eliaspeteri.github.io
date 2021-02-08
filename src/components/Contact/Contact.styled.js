@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledContact = styled.p`
+export const StyledContact = styled.div`
     font-family: Segoe UI;
     .grid-container {
         grid-template-columns: auto auto;
@@ -9,7 +9,12 @@ export const StyledContact = styled.p`
     a {
         color: ${({ theme }) => theme.primaryLight};
     }
+    h2 {
+        margin-top: 0px;
+    }
     p {
+        margin-top: 0px;
+        margin-bottom: 0px;
         padding-left: 1rem;
         padding-right: 1rem;
     }
@@ -19,5 +24,11 @@ export const StyledContact = styled.p`
         overflow: hidden;
         width: auto;
         height: 12rem;
+    }
+    @media (max-width: ${({ theme }) => theme.mobile}) {
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        top: 7rem;
     }
 `;

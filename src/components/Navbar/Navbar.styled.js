@@ -2,7 +2,10 @@ import styled from "styled-components";
 
 export const StyledNavbar = styled.nav`
     color: ${({ theme }) => theme.primaryLight};
-    font-size: 2rem;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 1rem;
     a {
         padding: 1rem;
         color: ${({ theme }) => theme.primaryLight};
@@ -17,7 +20,6 @@ export const StyledNavbar = styled.nav`
         color: ${({ theme }) => theme.primaryLight};
     }
     @media (max-width: ${({ theme }) => theme.mobile}) {
-        top: 0%;
-        font-size: 12px;
+        font-size: 1rem;
     }
 `;

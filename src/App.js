@@ -11,6 +11,7 @@ function App() {
     const [portfolioOpen, setPortfolioOpen] = useState(false);
     const [contactOpen, setContactOpen] = useState(false);
     const [greetingOpen, setGreetingOpen] = useState(true);
+    const [darkMode, setDarkMode] = useState(true);
     const node = useRef();
     const menuId = "main-menu";
 
@@ -55,11 +56,19 @@ function App() {
         }
     };
 
+    const handleDarkModeChange = () => {
+        if (darkMode) setDarkMode(false);
+        else setDarkMode(true);
+    };
+
     useOnClickOutside(node, () => setBurgerOpen(false));
     return (
         <ThemeProvider theme={theme}>
             <>
                 <GlobalStyles />
+                {/* <button id="darkModeSwitch" onClick={handleDarkModeChange}>
+                    Dark Mode
+                </button> */}
                 <Navbar
                     home={handleHomeVisibility}
                     about={handleAboutVisibility}

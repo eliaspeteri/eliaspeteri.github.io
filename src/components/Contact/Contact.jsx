@@ -3,11 +3,11 @@ import portrait from "./portrait.png";
 const Contact = () => {
     return (
         <StyledContact data-testid="contactComponent">
-            <div class="grid-container">
-                <div class="grid-item">
+            <div className="grid-container">
+                <div className="grid-item">
                     <img src={portrait} alt="portrait"></img>
                 </div>
-                <div class="grid-item">
+                <div className="grid-item">
                     <h2>Contact information</h2>
                     <p>
                         <a href="mailto:elias.peteri@tuni.fi">
@@ -22,11 +22,10 @@ const Contact = () => {
                             LinkedIn (click me too!)
                         </a>
                         <br />
-                        Location: Tampere area, Finland
-                        <p>
-                            For employers: inquire for CV or further details
-                            through my email.
-                        </p>
+                        Location: Tampere area, Finland <br />
+                        <br />
+                        For employers: inquire for CV or further details through
+                        my email.
                     </p>
                 </div>
             </div>
