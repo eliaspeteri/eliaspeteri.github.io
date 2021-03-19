@@ -16,10 +16,8 @@ export const StyledPortfolio = styled.div`
     button::hover {
         color: ${({ theme }) => theme.primaryHover};
     }
-    h2 {
-        cursor: pointer;
-    }
     @media (max-width: ${({ theme }) => theme.mobile}) {
+        transition: top ease-in-out 1s;
         position: absolute;
         left: 0px;
         right: 0px;
