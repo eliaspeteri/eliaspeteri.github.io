@@ -11,10 +11,18 @@ const Navbar = () => {
             <Router>
                 <div>
                     <nav>
-                        <Link to="/">Home</Link>
-                        <Link to="/about">About</Link>
-                        <Link to="/portfolio">Portfolio</Link>
-                        <Link to="/contact">Contact</Link>
+                        <Link to="/" data-testid="homeBtn">
+                            Home
+                        </Link>
+                        <Link to="/about" data-testid="aboutBtn">
+                            About
+                        </Link>
+                        <Link to="/portfolio" data-testid="portfolioBtn">
+                            Portfolio
+                        </Link>
+                        <Link to="/contact" data-testid="contactBtn">
+                            Contact
+                        </Link>
                     </nav>
                     <Switch>
                         <Route path="/about">

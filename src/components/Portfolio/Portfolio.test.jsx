@@ -5,8 +5,8 @@ test("Portfolio page is rendered", () => {
     const { getByTestId } = render(<Portfolio />);
     const element = getByTestId("portfolioComponent");
     const github = getByTestId("githubElement");
-    const easyProj = getByTestId("easyProjElement");
+    const smallProejct = getByTestId("smallProjectElement");
     expect(element).toBeInTheDocument;
     expect(github).toBeInTheDocument;
-    expect(easyProj).toBeInTheDocument;
+    expect(smallProject).toBeInTheDocument;
 });

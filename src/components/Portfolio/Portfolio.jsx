@@ -1,7 +1,9 @@
 import { StyledPortfolio } from "./Portfolio.styled";
 import Taximap from "./Taximap/taximap";
 import Mandelbrot from "./Mandelbrot/Mandelbrot";
-import Flock from "./Boid/Flock";
+// import Calculator from "./Calculator/Calculator";
+// import ShoppingCart from "./ShoppingCart/ShoppingCart";
+// import Flock from "./Boid/Flock";
 import {
     Switch,
     Route,
@@ -11,14 +13,16 @@ import {
 } from "react-router-dom";
 const Project = () => {
     let { projectId } = useParams();
-    if (projectId == "taximap") {
+    if (projectId === "taximap") {
         return <Taximap />;
-    } else if (projectId == "mandelbrot") return <Mandelbrot />;
-    else if (projectId == "flock") return <Flock />;
-    else return <>Requested Project ID: {projectId}</>;
+    } else if (projectId === "mandelbrot") return <Mandelbrot />;
+    // else if (projectId === "calculator") return <Calculator />;
+    // else if (projectId === "shoppingcart") return <ShoppingCart />;
+    // else if (projectId == "flock") return <Flock />;
+    else return <p>Requested Project ID: {projectId}</p>;
 };
 const Portfolio = () => {
-    let match = useRouteMatch();
+    const match = useRouteMatch();
     return (
         <StyledPortfolio data-testid="portfolioComponent">
             <h2 data-testid="githubElement">GitHub</h2>
@@ -41,20 +45,19 @@ const Portfolio = () => {
                 >
                     Taximap
                 </a>
-                {/* <a
-                    href="https://github.com/eliaspeteri/mandelbrot"
-                    className="grid-item"
-                >
-                    Mandelbrot
-                </a> */}
-                <Link to={`${match.url}/mandelbrot`}>Mandelbrot</Link>
-                {/* <a
+                <a
                     href="https://github.com/eliaspeteri/boid"
                     className="grid-item"
                 >
                     Boid simulation
-                </a> */}
-                <Link to={`${match.url}/flock`}>Boid simulation</Link>
+                </a>
+                {/* <Link to={`${match.url}/flock`}>Boid simulation</Link> */}
+            </div>
+            <h2 data-testid="smallProjectElement">Small projects</h2>
+            <div className="grid-container">
+                <Link to={`${match.url}/mandelbrot`}>Mandelbrot</Link>
+                {/* <Link to={`${match.url}/calculator`}>Calculator</Link> */}
+                {/* <Link to={`${match.url}/shoppingcart`}>Shopping cart</Link> */}
             </div>
             <Switch>
                 <Route path={`${match.path}/:projectId`}>

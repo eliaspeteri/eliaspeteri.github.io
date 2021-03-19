@@ -53,12 +53,12 @@ const Mandelbrot = () => {
                 const pix = (i + j * p5.width) * 4;
                 const norm = p5.map(n, 0, maxiterations, 0, 1);
                 let bright = p5.map(p5.sqrt(norm), 0, 1, 0, 255);
-                if (n == maxiterations) {
+                if (n === maxiterations) {
                     bright = 0;
                 } else {
                     // Gosh, we could make fancy colors here if we wanted
                     p5.pixels[pix + 0] = bright;
-                    p5.pixels[pix + 1] = bright;
+                    p5.pixels[pix + 1] = 0;
                     p5.pixels[pix + 2] = bright;
                     p5.pixels[pix + 3] = 255;
                 }

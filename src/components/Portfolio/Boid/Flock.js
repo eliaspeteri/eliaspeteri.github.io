@@ -1,5 +1,5 @@
 import React from "react";
-import { Sketch } from "react-p5";
+import Sketch from "react-p5";
 
 class Boid {
     constructor(p5) {
@@ -30,7 +30,7 @@ class Boid {
         let total = 0;
         for (let other of boids) {
             let d = p5.dist(this.pos.x, this.pos.y, other.pos.x, other.pos.y);
-            if (other != this && d < perceptionRadius) {
+            if (other !== this && d < perceptionRadius) {
                 steering.add(other.vel);
                 total++;
             }
@@ -49,7 +49,7 @@ class Boid {
         let total = 0;
         for (let other of boids) {
             let d = p5.dist(this.pos.x, this.pos.y, other.pos.x, other.pos.y);
-            if (other != this && d < perceptionRadius) {
+            if (other !== this && d < perceptionRadius) {
                 steering.add(other.pos);
                 total++;
             }
@@ -69,7 +69,7 @@ class Boid {
         let total = 0;
         for (let other of boids) {
             let d = p5.dist(this.pos.x, this.pos.y, other.pos.x, other.pos.y);
-            if (other != this && d < perceptionRadius) {
+            if (other !== this && d < perceptionRadius) {
                 let diff = p5.Vector.sub(this.pos, other.pos);
                 // diff.div(d);
                 diff.div(Math.pow(d, 2));
