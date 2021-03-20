@@ -1,80 +1,72 @@
-import { FindetoNth, FindPitoNth, Collatz, CaesarCipher } from "./easyProjects";
-import { useState } from "react";
 import { StyledPortfolio } from "./Portfolio.styled";
+import Taximap from "./Taximap/taximap";
+import Mandelbrot from "./Mandelbrot/Mandelbrot";
+// import Calculator from "./Calculator/Calculator";
+// import ShoppingCart from "./ShoppingCart/ShoppingCart";
+// import Flock from "./Boid/Flock";
+import {
+    Switch,
+    Route,
+    Link,
+    useRouteMatch,
+    useParams,
+} from "react-router-dom";
+const Project = () => {
+    let { projectId } = useParams();
+    if (projectId === "taximap") {
+        return <Taximap />;
+    } else if (projectId === "mandelbrot") return <Mandelbrot />;
+    // else if (projectId === "calculator") return <Calculator />;
+    // else if (projectId === "shoppingcart") return <ShoppingCart />;
+    // else if (projectId == "flock") return <Flock />;
+    else return <p>Requested Project ID: {projectId}</p>;
+};
 const Portfolio = () => {
-    const [easyOpen, setEasyOpen] = useState(false);
-    const [gitHubOpen, setGitHubOpen] = useState(true);
-    // const [mediumOpen, setMediumOpen] = useState(true);
-    const handleEasyVisibility = () => {
-        if (easyOpen) setEasyOpen(false);
-        else setEasyOpen(true);
-    };
-    const handleGitHubVisibility = () => {
-        if (gitHubOpen) setGitHubOpen(false);
-        else setGitHubOpen(true);
-    };
-    // const handleMediumVisibility = () => {
-    //     if (mediumOpen) setMediumOpen(false);
-    //     else setMediumOpen(true);
-    // };
+    const match = useRouteMatch();
     return (
-        <StyledPortfolio open={easyOpen} data-testid="portfolioComponent">
-            <h2 onClick={handleGitHubVisibility} data-testid="githubElement">
-                GitHub
-            </h2>
-            {gitHubOpen ? (
-                <div className="grid-container">
-                    <a
-                        href="https://github.com/eliaspeteri/notes"
-                        className="grid-item"
-                    >
-                        Notes
-                    </a>
-                    <a
-                        href="https://github.com/eliaspeteri/THL-Corona"
-                        className="grid-item"
-                    >
-                        THL-Corona
-                    </a>
-                    <a
-                        href="https://github.com/eliaspeteri/taximap"
-                        className="grid-item"
-                    >
-                        Taximap
-                    </a>
-                    <a
-                        href="https://github.com/eliaspeteri/mandelbrot"
-                        className="grid-item"
-                    >
-                        Mandelbrot
-                    </a>
-                    <a
-                        href="https://github.com/eliaspeteri/boid"
-                        className="grid-item"
-                    >
-                        Boid simulation
-                    </a>
-                </div>
-            ) : null}
-            <h2 onClick={handleEasyVisibility} data-testid="easyProjElement">
-                Easy projects
-            </h2>
-            {easyOpen ? (
-                <div className="grid-container">
-                    <div className="grid-item">
-                        <FindPitoNth />
-                    </div>
-                    <div className="grid-item">
-                        <FindetoNth />
-                    </div>
-                    <div className="grid-item">
-                        <Collatz />
-                    </div>
-                    {/* <div class="grid-item">
-                        <CaesarCipher />
-                    </div> */}
-                </div>
-            ) : null}
+        <StyledPortfolio data-testid="portfolioComponent">
+            <h2 data-testid="githubElement">GitHub</h2>
+            <div className="grid-container">
+                <a
+                    href="https://github.com/eliaspeteri/notes"
+                    className="grid-item"
+                >
+                    Notes
+                </a>
+                <a
+                    href="https://github.com/eliaspeteri/THL-Corona"
+                    className="grid-item"
+                >
+                    THL-Corona
+                </a>
+                <a
+                    href="https://github.com/eliaspeteri/taximap"
+                    className="grid-item"
+                >
+                    Taximap
+                </a>
+                <a
+                    href="https://github.com/eliaspeteri/boid"
+                    className="grid-item"
+                >
+                    Boid simulation
+                </a>
+                {/* <Link to={`${match.url}/flock`}>Boid simulation</Link> */}
+            </div>
+            <h2 data-testid="smallProjectElement">Small projects</h2>
+            <div className="grid-container">
+                <Link to={`${match.url}/mandelbrot`}>Mandelbrot</Link>
+                {/* <Link to={`${match.url}/calculator`}>Calculator</Link> */}
+                {/* <Link to={`${match.url}/shoppingcart`}>Shopping cart</Link> */}
+            </div>
+            <Switch>
+                <Route path={`${match.path}/:projectId`}>
+                    <Project />
+                </Route>
+                <Route path={match.path}>
+                    <p>Please select a project.</p>
+                </Route>
+            </Switch>
         </StyledPortfolio>
     );
 };
