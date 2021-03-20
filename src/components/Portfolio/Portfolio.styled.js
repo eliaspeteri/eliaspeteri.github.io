@@ -1,8 +1,10 @@
 import styled from "styled-components";
 export const StyledPortfolio = styled.div`
+    z-index: 1;
     .grid-container {
-        grid-template-columns: auto auto auto;
+        grid-template-columns: auto auto;
         display: inline-grid;
+        font-size: 2rem;
     }
     .grid-item {
         padding: 1rem;
@@ -13,14 +15,14 @@ export const StyledPortfolio = styled.div`
     a::hover {
         color: ${({ theme }) => theme.primaryHover};
     }
-    button::hover {
-        color: ${({ theme }) => theme.primaryHover};
-    }
     @media (max-width: ${({ theme }) => theme.mobile}) {
-        transition: top ease-in-out 1s;
+        .grid-container {
+            grid-template-columns: auto;
+        }
+        transition: top ease 0.5s;
+        top: 6rem;
         position: absolute;
         left: 0px;
         right: 0px;
-        top: 5rem;
     }
 `;

@@ -1,5 +1,5 @@
 import React from "react";
-import { getByTestId, render, screen } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import { default as Navbar } from "./Navbar";
 test("Navbar is rendered", () => {
     const { getByTestId } = render(<Navbar />);

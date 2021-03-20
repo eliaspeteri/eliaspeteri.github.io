@@ -1,83 +1,31 @@
-import React, { useRef, useState } from "react";
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
-import { useOnClickOutside } from "./hooks";
 import { GlobalStyles } from "./global";
 import { theme } from "./theme";
-import { Burger, Menu, Navbar } from "./components";
-import Focuslock from "react-focus-lock";
+import { Navbar, Home, About, Portfolio, Contact } from "./components";
 function App() {
-    const [burgerOpen, setBurgerOpen] = useState(false);
-    const [aboutOpen, setAboutOpen] = useState(false);
-    const [portfolioOpen, setPortfolioOpen] = useState(false);
-    const [contactOpen, setContactOpen] = useState(false);
-    const node = useRef();
-    const menuId = "main-menu";
-
-    const handleHomeVisibility = () => {
-        setAboutOpen(false);
-        setPortfolioOpen(false);
-        setContactOpen(false);
-    };
-    const handleAboutVisibility = () => {
-        if (aboutOpen) {
-            setAboutOpen(false);
-        } else {
-            setContactOpen(false);
-            setPortfolioOpen(false);
-            setAboutOpen(true);
-        }
-    };
-    const handleContactVisibility = () => {
-        if (contactOpen) {
-            setContactOpen(false);
-        } else {
-            setAboutOpen(false);
-            setPortfolioOpen(false);
-            setContactOpen(true);
-        }
-    };
-
-    const handlePortfolioVisibility = () => {
-        if (portfolioOpen) {
-            setPortfolioOpen(false);
-        } else {
-            setAboutOpen(false);
-            setContactOpen(false);
-            setPortfolioOpen(true);
-        }
-    };
-
-    useOnClickOutside(node, () => setBurgerOpen(false));
     return (
         <ThemeProvider theme={theme}>
             <>
                 <GlobalStyles />
-                <Navbar
-                    home={handleHomeVisibility}
-                    about={handleAboutVisibility}
-                    portfolio={handlePortfolioVisibility}
-                    contact={handleContactVisibility}
-                />
-                {window.screen.availWidth <= theme.mobileInt ? (
-                    <div ref={node}>
-                        <Focuslock disabled={!burgerOpen}>
-                            <Burger
-                                open={burgerOpen}
-                                setOpen={setBurgerOpen}
-                                aria-controls={menuId}
-                            />
-                            <Menu
-                                open={burgerOpen}
-                                home={handleHomeVisibility}
-                                about={handleAboutVisibility}
-                                portfolio={handlePortfolioVisibility}
-                                contact={handleContactVisibility}
-                                setOpen={setBurgerOpen}
-                                id={menuId}
-                            />
-                        </Focuslock>
-                    </div>
-                ) : null}
+                <Router>
+                    <Navbar />
+                    <Switch>
+                        <Route path="/about">
+                            <About />
+                        </Route>
+                        <Route path="/portfolio">
+                            <Portfolio />
+                        </Route>
+                        <Route path="/contact">
+                            <Contact />
+                        </Route>
+                        <Route path="/">
+                            <Home />
+                        </Route>
+                    </Switch>
+                </Router>
 
                 <footer>&copy;Elias Peteri 2021</footer>
             </>

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const StyledMenu = styled.nav`
+    z-index: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -16,7 +17,7 @@ export const StyledMenu = styled.nav`
     @media (max-width: ${({ theme }) => theme.mobile}) {
         width: 75%;
     }
-    button {
+    a {
         background: transparent;
         border: none;
         cursor: pointer;

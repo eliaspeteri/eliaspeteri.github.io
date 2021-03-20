@@ -1,5 +1,6 @@
 import React from "react";
 import { bool } from "prop-types";
+import { NavLink } from "react-router-dom";
 import { StyledMenu } from "./Menu.styled";
 
 const Menu = ({ open, setOpen, ...props }) => {
@@ -13,34 +14,22 @@ const Menu = ({ open, setOpen, ...props }) => {
             aria-hidden={!isHidden}
             {...props}
         >
-            <button
-                data-testid="homeBtn"
-                onClick={props.home}
-                tabIndex={tabIndex}
-            >
+            <NavLink to="/" data-testid="homeBtn" tabIndex={tabIndex}>
                 Home
-            </button>
-            <button
-                data-testid="aboutBtn"
-                onClick={props.about}
-                tabIndex={tabIndex}
-            >
+            </NavLink>
+            <NavLink to="/about" data-testid="aboutBtn" tabIndex={tabIndex}>
                 About
-            </button>
-            <button
+            </NavLink>
+            <NavLink
+                to="/portfolio"
                 data-testid="portfolioBtn"
-                onClick={props.portfolio}
                 tabIndex={tabIndex}
             >
                 Portfolio
-            </button>
-            <button
-                data-testid="contactBtn"
-                onClick={props.contact}
-                tabIndex={tabIndex}
-            >
+            </NavLink>
+            <NavLink to="/contact" data-testid="contactBtn" tabIndex={tabIndex}>
                 Contact
-            </button>
+            </NavLink>
         </StyledMenu>
     );
 };

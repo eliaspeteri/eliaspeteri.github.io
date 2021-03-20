@@ -3,7 +3,7 @@ import { StyledAbout } from "./About.styled";
 const About = () => {
     return (
         <StyledAbout data-testid="aboutComponent">
-            <div>
+            <>
                 <h2>About me</h2>
                 <p>
                     22-year-old third-year ICT Engineering student working on
@@ -75,7 +75,7 @@ const About = () => {
                         </p>
                     </div>
                 </div>
-            </div>
+            </>
         </StyledAbout>
     );
 };

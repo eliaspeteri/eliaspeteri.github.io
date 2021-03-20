@@ -1,43 +1,49 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import About from "../About/About";
-import Portfolio from "../Portfolio/Portfolio";
-import Contact from "../Contact/Contact";
+// import { useOnClickOutside } from "../../hooks";
+import { NavLink } from "react-router-dom";
+// import { Burger, Menu } from "../index";
+// import Focuslock from "react-focus-lock";
+
 import { StyledNavbar } from "./Navbar.styled";
 
 const Navbar = () => {
+    // const [burgerOpen, setBurgerOpen] = useState(false);
+    // const node = useRef();
+    // const menuId = "main-menu";
+
+    // useOnClickOutside(node, () => setBurgerOpen(false));
     return (
         <StyledNavbar data-testid="navComponent">
-            <Router>
-                <div>
-                    <nav>
-                        <Link to="/" data-testid="homeBtn">
-                            Home
-                        </Link>
-                        <Link to="/about" data-testid="aboutBtn">
-                            About
-                        </Link>
-                        <Link to="/portfolio" data-testid="portfolioBtn">
-                            Portfolio
-                        </Link>
-                        <Link to="/contact" data-testid="contactBtn">
-                            Contact
-                        </Link>
-                    </nav>
-                    <Switch>
-                        <Route path="/about">
-                            <About />
-                        </Route>
-                        <Route path="/portfolio">
-                            <Portfolio />
-                        </Route>
-                        <Route path="/contact">
-                            <Contact />
-                        </Route>
-                        <Route path="/">Hello.</Route>
-                    </Switch>
-                </div>
-            </Router>
+            {/* <div ref={node}>
+                <Focuslock disabled={!burgerOpen}>
+                    <Burger
+                        open={burgerOpen}
+                        setOpen={setBurgerOpen}
+                        aria-controls={menuId}
+                    />
+                    <Menu
+                        setOpen={setBurgerOpen}
+                        id={menuId}
+                        open={burgerOpen}
+                    />
+                </Focuslock>
+            </div> */}
+            <div>
+                <nav>
+                    <NavLink to="/" data-testid="homeBtn">
+                        Home
+                    </NavLink>
+                    <NavLink to="/about" data-testid="aboutBtn">
+                        About
+                    </NavLink>
+                    <NavLink to="/portfolio" data-testid="portfolioBtn">
+                        Portfolio
+                    </NavLink>
+                    <NavLink to="/contact" data-testid="contactBtn">
+                        Contact
+                    </NavLink>
+                </nav>
+            </div>
         </StyledNavbar>
     );
 };

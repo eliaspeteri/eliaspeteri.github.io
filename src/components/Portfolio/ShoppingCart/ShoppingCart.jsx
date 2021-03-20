@@ -2,12 +2,13 @@ import React, { useState } from "react";
 import NavBar from "./Navbar";
 import Counters from "./Counters";
 import ErrorBoundary from "../../ErrorBoundary";
+import "bootstrap/dist/css/bootstrap.min.css";
 const ShoppingCart = () => {
     const [counters, setCounters] = useState([
         { id: 1, value: 0 },
-        // { id: 2, value: 0 },
-        // { id: 3, value: 0 },
-        // { id: 4, value: 0 },
+        { id: 2, value: 0 },
+        { id: 3, value: 0 },
+        { id: 4, value: 0 },
     ]);
     const handleIncrement = (counter) => {
         const counters_i = [...counters];
