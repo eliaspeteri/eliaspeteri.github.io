@@ -60,6 +60,7 @@ const ShoppingCart = () => {
                     />
                 </ErrorBoundary>
             </main>
+            Built with React ⚛
         </div>
     );
 };

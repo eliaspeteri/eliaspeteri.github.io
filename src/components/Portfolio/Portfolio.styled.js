@@ -1,5 +1,10 @@
 import styled from "styled-components";
 export const StyledPortfolio = styled.div`
+    #closeElements {
+        position: absolute;
+        bottom: 0%;
+        color: red;
+    }
     z-index: 1;
     .grid-container {
         grid-template-columns: auto auto;

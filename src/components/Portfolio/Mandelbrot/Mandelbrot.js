@@ -68,7 +68,12 @@ const Mandelbrot = () => {
         }
         p5.updatePixels();
     };
-    return <Sketch setup={setup} draw={draw} />;
+    return (
+        <>
+            <Sketch setup={setup} draw={draw} />
+            Built with p5.js and React ⚛
+        </>
+    );
 };
 
 export default Mandelbrot;
