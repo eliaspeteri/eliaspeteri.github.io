@@ -24,9 +24,9 @@ const Contact = () => {
                         <br />
                         Location: Tampere area, Finland <br />
                         <br />
-                        For employers: inquire for CV or further details through
-                        my email.
                     </p>
+                    For employers: inquire for CV or further details through my
+                    email.
                 </div>
             </div>
         </StyledContact>

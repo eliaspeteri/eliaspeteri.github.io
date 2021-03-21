@@ -27,7 +27,10 @@ function App() {
                     </Switch>
                 </Router>
 
-                <footer>&copy;Elias Peteri 2021</footer>
+                <footer>
+                    <em>Built with</em> ❤ <em>using</em> ⚛{" "}
+                    <em>by Elias Peteri in the year 2021</em>
+                </footer>
             </>
         </ThemeProvider>
     );

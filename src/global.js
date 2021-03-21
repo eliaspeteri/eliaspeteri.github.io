@@ -36,13 +36,7 @@ export const GlobalStyles = createGlobalStyle`
   }
   footer {
     position:fixed;
-    bottom:0px;
+    bottom:0.5rem;
     right:1rem;
-    font-style:italic;
-  }
-  #darkModeSwitch {
-    position:absolute;
-    top:0px;
-    right:0px;
   }
 `;

@@ -8,12 +8,29 @@ const About = () => {
                 <p>
                     22-year-old third-year ICT Engineering student working on
                     Bachelor's degree in Software Engineering. Hails from
-                    Lapland but currently living in Tampere area. Strong minded,
-                    well motivated team player and reigning in decent grades.
-                    Hunger for learning, inhales documentaries and good shows.
+                    Lapland but currently living in Tampere area. <br />
+                    Strong minded, well motivated team player and reigning in
+                    decent grades. Hunger for learning, inhales documentaries
+                    and good shows. <br />
                     Looking for a part-time home, and hoping to eventually grow
-                    to fulfill a full-time position when time is right.
+                    to fulfill a full-time position as studies come to a close.
+                    <br />
+                    <b>
+                        Bonus points if you can offer a position to complete
+                        internships and perhaps a thesis!
+                    </b>
                 </p>
+                <h2>Qualities</h2>
+                <ul className="grid-container list">
+                    <li className="grid-item list-item">Well motivated</li>
+                    <li className="grid-item list-item">Strong minded</li>
+                    <li className="grid-item list-item">Team player</li>
+                    <li className="grid-item list-item">Heaps of potential</li>
+                    <li className="grid-item list-item">Hunger for learning</li>
+                    <li className="grid-item list-item">
+                        Jack of all trades, master of some
+                    </li>
+                </ul>
                 <h2>Interests</h2>
                 <div className="grid-container">
                     <div className="grid-item">
@@ -22,17 +39,18 @@ const About = () => {
                             <div className="grid-item">
                                 <h4>Frontend</h4>
                                 Mobile development (Learning Java + soon
-                                Kotlin), React, JS + HTML + CSS, Qt5.
+                                Kotlin), React, JS + HTML + CSS, Bootstrap,
+                                ES6+, Qt5, Responsive web design etc.
                             </div>
                             <div className="grid-item">
                                 <h4>Backend</h4>
                                 SQL (Postgres, MySQL), MongoDB, Node.js, axios,
-                                express, C++.
+                                express, Jest, REST APIs, C++.
                             </div>
                             <div className="grid-item">
                                 <h4>Scripting</h4>
-                                Python (BeautifulSoup, requests, pickle,
-                                pandas), bash.
+                                Python (BeautifulSoup, requests, pickle, pandas,
+                                matplotlib in a pinch), bash.
                             </div>
                             <div className="grid-item">
                                 <h4>Miscellaneous</h4>

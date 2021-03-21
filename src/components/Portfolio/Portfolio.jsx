@@ -1,10 +1,11 @@
 import { StyledPortfolio } from "./Portfolio.styled";
-// import Taximap from "./Taximap/taximap";
-import Mandelbrot from "./Mandelbrot/Mandelbrot";
-// import Calculator from "./Calculator/Calculator";
-import ShoppingCart from "./ShoppingCart/ShoppingCart";
-import Calendar from "./Notes/Calendar";
+import Corona from "./Corona";
+import Mandelbrot from "./Mandelbrot";
+// import Taximap from "./Taximap/";
+// import Calculator from "./Calculator";
 // import Flock from "./Boid/Flock";
+import ShoppingCart from "./ShoppingCart";
+import Calendar from "./Notes/Calendar";
 import ErrorBoundary from "../ErrorBoundary";
 import {
     Switch,
@@ -15,14 +16,15 @@ import {
 } from "react-router-dom";
 const Project = () => {
     let { projectId } = useParams();
-    // if (projectId === "taximap") {
+    if (projectId === "mandelbrot") return <Mandelbrot />;
+    // else if (projectId === "taximap") {
     //     return <Taximap />;
     // }
-    if (projectId === "mandelbrot") return <Mandelbrot />;
     else if (projectId === "notes") return <Calendar />;
     // else if (projectId === "calculator") return <Calculator />;
     else if (projectId === "shoppingcart") return <ShoppingCart />;
     // else if (projectId === "flock") return <Flock />;
+    else if (projectId === "corona") return <Corona />;
     else return <p>Requested Project ID: {projectId}</p>;
 };
 const Portfolio = () => {
@@ -32,6 +34,7 @@ const Portfolio = () => {
             <Link to={`${match.url}`} id="closeElements">
                 Close all
             </Link>
+
             <h2 data-testid="githubElement">GitHub</h2>
             <div className="grid-container">
                 <a
@@ -62,6 +65,9 @@ const Portfolio = () => {
             </div>
             <h2 data-testid="smallProjectElement">Small example projects</h2>
             <div className="grid-container">
+                {/* <Link to={`${match.url}/taximap`} className="grid-item">
+                    Taximap
+                </Link> */}
                 <Link to={`${match.url}/mandelbrot`} className="grid-item">
                     Mandelbrot
                 </Link>
@@ -71,6 +77,12 @@ const Portfolio = () => {
                     Shopping cart
                 </Link>
             </div>
+            {/* <h2>Medium example projects</h2>
+            <div className="grid-container">
+                <Link to={`${match.url}/corona`} className="grid-item">
+                    Corona
+                </Link>
+            </div> */}
             <h2 data-testid="bigProjectElement">Bigger example projects</h2>
             <div className="grid-container">
                 <Link to={`${match.url}/notes`} className="grid-item">

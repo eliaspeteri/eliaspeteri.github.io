@@ -1,11 +1,11 @@
 import React from "react";
 import Sketch from "react-p5";
 import Mappa from "mappa-mundi";
+import data from "./data/taxiday1.geojson";
 let canvas;
 let myMap;
 let tripsCoordinates;
 let allCoordinates = [];
-let data;
 
 let delta = 0;
 let coordinate = 0;
@@ -24,10 +24,6 @@ const Taximap = () => {
         style: "http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png",
     };
     const mappa = new Mappa("Leaflet");
-
-    const preload = (p5) => {
-        data = p5.loadJSON("./data/taxiday1.geojson");
-    };
 
     const setup = (p5, canvasParentRef) => {
         canvas = p5.createCanvas(800, 700).parent(canvasParentRef);
@@ -98,6 +94,6 @@ const Taximap = () => {
             p5.endShape();
         }
     };
-    return <Sketch setup={setup} draw={draw} preload={preload} />;
+    return <Sketch setup={setup} draw={draw} />;
 };
 export default Taximap;

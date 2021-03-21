@@ -17,15 +17,15 @@ export const StyledContact = styled.div`
     p {
         margin-top: 0px;
         margin-bottom: 0px;
-        padding-left: 1rem;
-        padding-right: 1rem;
+        padding: 0rem;
     }
     img {
         background-position: center center;
         background-repeat: no-repeat;
         overflow: hidden;
         width: auto;
-        height: 16rem;
+        height: 21.3rem;
+        margin-right: 1rem;
     }
     @media (max-width: ${({ theme }) => theme.mobile}) {
         transition: top ease-in-out 0.5s;
@@ -34,6 +34,7 @@ export const StyledContact = styled.div`
         right: 0px;
         top: 30%;
         .grid-container {
+            grid-template-columns: auto;
             transition: font-size ease 0.5s;
             font-size: 1.5rem;
             transition: margin ease 0.5s;
@@ -41,10 +42,14 @@ export const StyledContact = styled.div`
         }
         .grid-item {
             top: 0%;
+            margin-bottom: 2rem;
         }
         h2 {
             transition: font-size ease 0.5s;
             font-size: 2rem;
+        }
+        img {
+            height: 25rem;
         }
     }
 `;

@@ -47,6 +47,7 @@
     },
     "devDependencies": {
         "date-fns": "^2.19.0",
+        "mappa-mundi": "0.0.5",
         "react-icons": "^4.2.0"
     }
 }

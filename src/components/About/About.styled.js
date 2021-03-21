@@ -10,8 +10,15 @@ export const StyledAbout = styled.div`
         display: grid;
     }
     .grid-item {
-        padding-left: 1rem;
-        padding-right: 1rem;
+        padding: 0rem 1rem;
+    }
+    .list {
+        padding: 0rem 25%;
+    }
+    .list-item {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
     }
     a {
         color: ${({ theme }) => theme.primaryLight};

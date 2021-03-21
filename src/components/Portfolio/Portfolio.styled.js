@@ -1,7 +1,7 @@
 import styled from "styled-components";
 export const StyledPortfolio = styled.div`
     #closeElements {
-        position: absolute;
+        position: relative;
         bottom: 0%;
         color: red;
     }
