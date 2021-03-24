@@ -12,7 +12,7 @@
 
 .day-names {
     font-size: 100%;
-    /*letter-spacing: 0.5px;*/
+    letter-spacing: 0.5px;
     display: flex;
     justify-content: center; /*horizontal align*/
     align-items: center; /*vertical align*/
@@ -28,7 +28,7 @@
     cursor: pointer;
     border: 1px solid black;
     user-select: none;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 .date:hover {
     background-color: #dddddd;
@@ -45,7 +45,7 @@
 .date-today:active {
     background: rgb(106, 172, 194);
 }
-.date-different-month {
+.date {
     background: gray;
 }
 .date-different-month:hover {

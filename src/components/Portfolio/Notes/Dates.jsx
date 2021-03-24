@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./dates.css";
+import "./css/dates.css";
 import {
     format,
     add,
@@ -47,12 +47,37 @@ class Dates extends Component {
                             <b>{weekdays[day]}</b>
                         </div>
                         {[...Array(5)].map((x, week) => (
-                            <div key={week + day}>
+                            <div
+                                key={week + day}
+                                // If the currently printed date matches today's date, use the date-today class
+                                className={
+                                    format(
+                                        add(startDate, {
+                                            days: 7 * week + day,
+                                        }),
+                                        "dd"
+                                    ) === format(this.state.today, "dd") &&
+                                    format(this.state.today, "yyyyMM") ===
+                                        format(startDate, "yyyyMM")
+                                        ? "date-today"
+                                        : // Else if the selected month does not match this month, use the date-different-month class
+                                        format(
+                                              add(startDate, {
+                                                  days: 7 * week + day,
+                                              }),
+                                              "yyyyMM"
+                                          ) !==
+                                          format(this.state.today, "yyyyMM")
+                                        ? "date-different-month"
+                                        : // Else use the date class
+                                          "date"
+                                }
+                            >
                                 {format(
                                     add(startDate, {
                                         days: 7 * week + day,
                                     }),
-                                    "dd"
+                                    "d"
                                 )}
                             </div>
                         ))}

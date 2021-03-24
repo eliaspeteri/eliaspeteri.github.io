@@ -1,6 +1,6 @@
 import React, { Component, useEffect, useState } from "react";
 import { IoArrowBackOutline, IoArrowForwardOutline } from "react-icons/io5";
-import "./calendar.css";
+import "./css/calendar.css";
 import {
     getDay,
     format,
@@ -34,6 +34,9 @@ class Calendar extends Component {
             this.setState({
                 viewDate: subMonths(this.state.viewDate, 1),
             });
+        } else if (move === "today") {
+            console.log("clicked today");
+            this.setState({ viewDate: this.state.today });
         }
     };
 
@@ -81,10 +84,15 @@ class Calendar extends Component {
                     >
                         <IoArrowBackOutline size={20} color={"#646464"} />
                     </button>
-                    <b id="month">{`${format(viewDate, "MMMM")} ${format(
-                        viewDate,
-                        "yyyy"
-                    )}`}</b>
+                    <b id="month">
+                        <button
+                            id="today-month"
+                            onClick={() => this.handleClick("today")}
+                        >{`${format(viewDate, "MMMM")} ${format(
+                            viewDate,
+                            "yyyy"
+                        )}`}</button>
+                    </b>
                     <button
                         id="next-month"
                         onClick={() => {

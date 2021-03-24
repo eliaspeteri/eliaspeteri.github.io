@@ -46,12 +46,15 @@ img {
 #month {
     font-size: 140%;
 }
-
 /* BUTTONS */
 button {
     user-select: none;
     outline: none;
     cursor: pointer;
+}
+#today-month {
+    background-color: transparent;
+    border: none;
 }
 #previous-month,
 #next-month {
