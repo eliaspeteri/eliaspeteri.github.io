@@ -1,5 +1,5 @@
 import { StyledContact } from "./Contact.styled";
-import portrait from "./portrait.png";
+import portrait from "../../resources/img/portrait.png";
 const Contact = () => {
     return (
         <StyledContact data-testid="contactComponent">
@@ -25,8 +25,6 @@ const Contact = () => {
                         Location: Tampere area, Finland <br />
                         <br />
                     </p>
-                    For employers: inquire for CV or further details through my
-                    email.
                 </div>
             </div>
         </StyledContact>

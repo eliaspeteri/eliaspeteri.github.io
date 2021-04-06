@@ -34,9 +34,28 @@ export const GlobalStyles = createGlobalStyle`
     color: ${({ theme }) => theme.primaryHover};
     text-decoration: none;
   }
+  nav {
+      position:fixed;
+      top: 0.5rem;
+      left: 0;
+      right: 0;
+  }
   footer {
     position:fixed;
     bottom:0.5rem;
     right:1rem;
+  }
+  footer img {
+      position:relative;
+      bottom: 0.2rem;
+      width: 4rem;
+      height: auto;
+      padding-right: 1rem;
+  }
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+      footer {
+          left: 0;
+          right: 0;
+      }
   }
 `;
