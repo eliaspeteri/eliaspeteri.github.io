@@ -20,6 +20,10 @@ export const StyledPortfolio = styled.div`
     a::hover {
         color: ${({ theme }) => theme.primaryHover};
     }
+    .projectContainer {
+        background-color: white;
+        padding: 10rem, 0rem;
+    }
     @media (max-width: ${({ theme }) => theme.mobile}) {
         .grid-container {
             grid-template-columns: auto;
