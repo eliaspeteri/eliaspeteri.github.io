@@ -37,7 +37,10 @@ class Resume extends Component {
                         Tampere University of Applied Sciences
                     </div>
                     <div className="grid-item">
-                        <em>Bachelor in Software Engineering</em>
+                        <em>Bachelor of ICT Engineering</em>
+                    </div>
+                    <div className="grid-item">
+                        Major in Software Engineering
                     </div>
                     <ul>
                         <li className="grid-item">
@@ -69,12 +72,20 @@ class Resume extends Component {
                     <div className="grid-item">
                         <em>Office Employee</em>
                     </div>
+                    <div className="grid-item">
+                        Preparing visit lists and providing support for elderly
+                        home care nurses.
+                    </div>
                 </div>
                 <div className="grid-container">Nov 2018 - Present</div>
                 <div className="grid-container">
                     <div className="grid-item">Mielen Ry</div>
                     <div className="grid-item">
                         <em>Volunteer</em>
+                    </div>
+                    <div className="grid-item">
+                        Facilitating hangouts for people with difficulties
+                        leaving their residence.
                     </div>
                 </div>
                 <div className="grid-container">

@@ -3,13 +3,18 @@ import styled from "styled-components";
 export const StyledContact = styled.div`
     font-family: Segoe UI;
     z-index: 1;
+    background-color: white;
+    color: black;
+    padding: 2rem;
+    box-shadow: 6px 6px 2px 1px #969696;
+    -webkit-box-shadow: 6px 6px 2px 1px #969696;
     .grid-container {
         grid-template-columns: auto auto;
         display: inline-grid;
         font-size: 2rem;
     }
     a {
-        color: ${({ theme }) => theme.primaryLight};
+        color: ${({ theme }) => theme.primaryDark};
     }
     h2 {
         margin-top: 0px;

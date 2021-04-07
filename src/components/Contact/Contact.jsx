@@ -7,19 +7,19 @@ const Contact = () => {
                 <div className="grid-item">
                     <img src={portrait} alt="portrait"></img>
                 </div>
-                <div className="grid-item">
+                <div className="grid-item" style={{ textAlign: "left" }}>
                     <h2>Contact information</h2>
                     <p>
+                        <em>Elias Peteri</em>
+                        <br />
                         <a href="mailto:elias.peteri@tuni.fi">
-                            email: elias.peteri@tuni.fi
+                            elias.peteri@tuni.fi
                         </a>
                         <br />
-                        <a href="https://www.github.com/eliaspeteri">
-                            GitHub (click me!)
-                        </a>
+                        <a href="https://www.github.com/eliaspeteri">GitHub</a>
                         <br />
                         <a href="https://www.linkedin.com/in/eliaspeteri">
-                            LinkedIn (click me too!)
+                            LinkedIn
                         </a>
                         <br />
                         Location: Tampere area, Finland <br />

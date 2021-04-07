@@ -1,5 +1,11 @@
 import styled from "styled-components";
 export const StyledPortfolio = styled.div`
+    background-color: white;
+    color: black;
+    padding: 2rem;
+    box-shadow: 6px 6px 2px 1px #969696;
+    -webkit-box-shadow: 6px 6px 2px 1px #969696;
+    text-align: left;
     #closeElements {
         position: relative;
         bottom: 0%;
@@ -15,7 +21,7 @@ export const StyledPortfolio = styled.div`
         padding: 1rem;
     }
     a {
-        color: ${({ theme }) => theme.primaryLight};
+        color: ${({ theme }) => theme.primaryDark};
     }
     a::hover {
         color: ${({ theme }) => theme.primaryHover};

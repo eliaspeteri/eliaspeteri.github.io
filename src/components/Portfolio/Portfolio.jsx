@@ -81,7 +81,9 @@ const Portfolio = () => {
                     </ErrorBoundary>
                 </Route>
                 <Route path={match.path}>
-                    <p>Please select a project.</p>
+                    <p style={{ textAlign: "center" }}>
+                        Please select a project.
+                    </p>
                 </Route>
             </Switch>
         </StyledPortfolio>

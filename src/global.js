@@ -41,21 +41,20 @@ export const GlobalStyles = createGlobalStyle`
       right: 0;
   }
   footer {
+    background-color: black;
     position:fixed;
-    bottom:0.5rem;
-    right:1rem;
+    padding: 0.5rem;
+    bottom:0rem;
+    right:0rem;
+    left: 0rem;
   }
   footer img {
       position:relative;
-      bottom: 0.2rem;
-      width: 4rem;
+      bottom: 0.25rem;
+      width: 3rem;
       height: auto;
       padding-right: 1rem;
   }
   @media (max-width: ${({ theme }) => theme.mobile}) {
-      footer {
-          left: 0;
-          right: 0;
-      }
   }
 `;
