@@ -24,6 +24,9 @@ export const StyledNavbar = styled.nav`
     color: ${({ theme }) => theme.primaryLight};
     @media (max-width: ${({ theme }) => theme.mobile}) {
         * {
+            font-size: 1rem;
+            left: 0;
+            right: 0;
             background-color: black;
         }
     }

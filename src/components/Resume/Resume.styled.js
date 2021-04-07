@@ -23,7 +23,7 @@ export const StyledResume = styled.div`
         text-align: left;
     }
     @media (max-width: ${({ theme }) => theme.mobile}) {
-        margin-top: 50rem;
+        margin-top: 60rem;
         margin-bottom: 5rem;
         * {
             box-shadow: 0px 0px 0px 0px;
