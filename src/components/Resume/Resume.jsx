@@ -117,6 +117,20 @@ class Resume extends Component {
                     <div className="grid-item">Beautiful Soup</div>
                     <div className="grid-item">Requests</div>
                 </div>
+                <div className="grid-container">
+                    <h1>Languages</h1>
+                </div>
+                <div className="grid-container"></div>
+                <div className="grid-container">Professional or Native</div>
+                <div className="grid-container inner">
+                    <div className="grid-item">Finnish</div>
+                    <div className="grid-item">English</div>
+                </div>
+                <div className="grid-container">Basics</div>
+                <div className="grid-container inner">
+                    <div className="grid-item">Swedish</div>
+                    <div className="grid-item">German</div>
+                </div>
                 <div className="grid-container">Keywords</div>
                 <div className="grid-container inner">
                     <div className="grid-item">XML, JSON, CSV, YML</div>
