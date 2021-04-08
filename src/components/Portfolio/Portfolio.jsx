@@ -26,7 +26,10 @@ const Project = () => {
 const Portfolio = () => {
     const match = useRouteMatch();
     return (
-        <StyledPortfolio data-testid="portfolioComponent">
+        <StyledPortfolio
+            data-testid="portfolioComponent"
+            className="has-shadow light-bg"
+        >
             <Link to={`${match.url}`} id="closeElements">
                 Close all
             </Link>
@@ -77,7 +80,9 @@ const Portfolio = () => {
             <Switch>
                 <Route path={`${match.path}/:projectId`}>
                     <ErrorBoundary>
-                        <Project />
+                        <div className="project-container">
+                            <Project />
+                        </div>
                     </ErrorBoundary>
                 </Route>
                 <Route path={match.path}>

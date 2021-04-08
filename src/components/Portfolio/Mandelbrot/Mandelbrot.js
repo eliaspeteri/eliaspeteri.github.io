@@ -2,8 +2,10 @@ import React from "react";
 import Sketch from "react-p5";
 
 const Mandelbrot = () => {
+    const canvas_width = window.screen.availWidth * 0.8;
+    const canvas_height = canvas_width * 0.5;
     const setup = (p5, canvasParentRef) => {
-        p5.createCanvas(710, 400).parent(canvasParentRef);
+        p5.createCanvas(canvas_width, canvas_height).parent(canvasParentRef);
         p5.pixelDensity(1);
         p5.noLoop();
     };

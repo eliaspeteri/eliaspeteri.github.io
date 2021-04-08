@@ -4,7 +4,7 @@ import portrait from "../../resources/img/portrait.png";
 class Resume extends Component {
     render() {
         return (
-            <StyledResume>
+            <StyledResume className="has-shadow light-bg">
                 <div className="grid-container">
                     <img src={portrait} alt="portrait"></img>
                 </div>
@@ -31,7 +31,7 @@ class Resume extends Component {
                     <h1>Education</h1>
                 </div>
                 <div className="grid-container"></div>
-                <div className="grid-container">2018-2022</div>
+                <div className="grid-container">Aug 2018 - May 2022</div>
                 <div className="grid-container">
                     <div className="grid-item">
                         Tampere University of Applied Sciences
@@ -53,7 +53,7 @@ class Resume extends Component {
                         <li className="grid-item">Databases</li>
                     </ul>
                 </div>
-                <div className="grid-container">2014-2018</div>
+                <div className="grid-container">Aug 2014 - May 2018</div>
                 <div className="grid-container">
                     <div className="grid-item">
                         Sammon keskuslukio Central High School

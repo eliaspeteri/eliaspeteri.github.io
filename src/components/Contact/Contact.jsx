@@ -2,13 +2,13 @@ import { StyledContact } from "./Contact.styled";
 import portrait from "../../resources/img/portrait.png";
 const Contact = () => {
     return (
-        <StyledContact data-testid="contactComponent">
+        <StyledContact data-testid="contactComponent" className="has-shadow">
             <div className="grid-container">
                 <div className="grid-item">
                     <img src={portrait} alt="portrait"></img>
                 </div>
-                <div className="grid-item" style={{ textAlign: "left" }}>
-                    <h2>Contact information</h2>
+                <div className="grid-item">
+                    <h3>Contact information</h3>
                     <p>
                         <em>Elias Peteri</em>
                         <br />
@@ -23,8 +23,10 @@ const Contact = () => {
                         </a>
                         <br />
                         Location: Tampere area, Finland <br />
-                        <br />
                     </p>
+                    <h6>
+                        <em>You can best get a hold of me through my email.</em>
+                    </h6>
                 </div>
             </div>
         </StyledContact>

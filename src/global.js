@@ -34,11 +34,21 @@ export const GlobalStyles = createGlobalStyle`
     color: ${({ theme }) => theme.primaryHover};
     text-decoration: none;
   }
-  nav {
-      position:fixed;
-      top: 0.5rem;
-      left: 0;
-      right: 0;
+
+  .has-shadow {
+    box-shadow: 6px 6px 2px 1px #969696;
+    -webkit-box-shadow: 6px 6px 2px 1px #969696;
+  }
+  .light-bg {
+      background-color: white;
+      color: black;
+  }
+  .dark-bg {
+      background-color: black;
+      color: white;
+  }
+  .dark-bg a {
+      color:${({ theme }) => theme.primaryLight};
   }
   footer {
     background-color: black;
@@ -56,5 +66,7 @@ export const GlobalStyles = createGlobalStyle`
       padding-right: 1rem;
   }
   @media (max-width: ${({ theme }) => theme.mobile}) {
+      footer {
+      }
   }
 `;
