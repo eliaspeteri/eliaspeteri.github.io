@@ -66,7 +66,5 @@ export const GlobalStyles = createGlobalStyle`
       padding-right: 1rem;
   }
   @media (max-width: ${({ theme }) => theme.mobile}) {
-      footer {
-      }
   }
 `;

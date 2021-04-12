@@ -47,7 +47,7 @@ const Portfolio = () => {
                     href="https://github.com/eliaspeteri/THL-Corona"
                     className="grid-item"
                 >
-                    THL-Corona
+                    Coronavirus CLI
                 </a>
                 <a
                     href="https://github.com/eliaspeteri/taximap"
@@ -60,6 +60,12 @@ const Portfolio = () => {
                     className="grid-item"
                 >
                     Boid simulation
+                </a>
+                <a
+                    href="https://github.com/eliaspeteri/FullStackHelsinkiUni"
+                    className="grid-item"
+                >
+                    Full Stack Course
                 </a>
             </div>
             <h2 data-testid="smallProjectElement">Small example projects</h2>

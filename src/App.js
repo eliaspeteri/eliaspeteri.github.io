@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "./global";
 import { theme } from "./theme";
@@ -10,27 +10,24 @@ function App() {
         <ThemeProvider theme={theme}>
             <>
                 <GlobalStyles />
-                <Router>
-                    <Navbar />
-                    <Switch>
-                        <Route path="/about">
-                            <About />
-                        </Route>
-                        <Route path="/resume">
-                            <Resume />
-                        </Route>
-                        <Route path="/portfolio">
-                            <Portfolio />
-                        </Route>
-                        <Route path="/contact">
-                            <Contact />
-                        </Route>
-                        <Route path="/">
-                            <Home />
-                        </Route>
-                    </Switch>
-                </Router>
-
+                <Navbar />
+                <Switch>
+                    <Route path="/about">
+                        <About />
+                    </Route>
+                    <Route path="/resume">
+                        <Resume />
+                    </Route>
+                    <Route path="/portfolio">
+                        <Portfolio />
+                    </Route>
+                    <Route path="/contact">
+                        <Contact />
+                    </Route>
+                    <Route path="/">
+                        <Home />
+                    </Route>
+                </Switch>
                 <footer>
                     <a href="https://www.linkedin.com/in/eliaspeteri">
                         <img src={linkedin} alt="linkedin"></img>

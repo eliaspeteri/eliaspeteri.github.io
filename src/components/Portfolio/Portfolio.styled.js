@@ -6,12 +6,12 @@ export const StyledPortfolio = styled.div`
     text-align: left;
     #closeElements {
         position: relative;
-        bottom: 0%;
+        top: 0;
         color: red;
     }
     z-index: 1;
     .grid-container {
-        grid-template-columns: auto auto;
+        grid-template-columns: auto auto auto;
         display: inline-grid;
         font-size: 2rem;
     }

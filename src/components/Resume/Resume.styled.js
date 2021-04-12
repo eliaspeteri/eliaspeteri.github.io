@@ -3,11 +3,12 @@ import styled from "styled-components";
 export const StyledResume = styled.div`
     position: absolute;
     top: 6rem;
-    left: 30rem;
-    right: 30rem;
+    left: 10rem;
+    right: 10rem;
     display: grid;
     grid-template-columns: auto auto;
 
+    padding-bottom: 5rem;
     overflow: hidden;
     .grid-container {
         padding: 0.5rem 1rem;
