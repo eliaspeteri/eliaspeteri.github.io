@@ -13,7 +13,10 @@ import keywords from "../../resources/data/keywords.json";
 import languages from "../../resources/data/languages.json";
 const Resume = () => {
     return (
-        <StyledResume className="has-shadow light-bg">
+        <StyledResume
+            data-testid="resumeComponent"
+            className="has-shadow light-bg"
+        >
             <div className="grid-container">
                 <img src={portrait} alt="portrait"></img>
             </div>

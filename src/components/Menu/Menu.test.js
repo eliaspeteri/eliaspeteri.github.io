@@ -1,12 +1,17 @@
 import React from "react";
-import { getByTestId, render, screen } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import { default as Menu } from "./Menu";
+import { BrowserRouter } from "react-router-dom";
 test("Menu is rendered", () => {
-    const { getByTestId } = render(<Menu />);
+    const { getByTestId } = render(
+        <BrowserRouter>
+            <Menu open={true} />
+        </BrowserRouter>
+    );
     const element = getByTestId("menuComponent");
     expect(element).toBeInTheDocument;
-    expect(element).toContainElement(getByTestId("homeBtn"));
-    expect(element).toContainElement(getByTestId("aboutBtn"));
-    expect(element).toContainElement(getByTestId("portfolioBtn"));
-    expect(element).toContainElement(getByTestId("contactBtn"));
+    expect(getByTestId("homeBtn")).toBeInTheDocument;
+    expect(getByTestId("aboutBtn")).toBeInTheDocument;
+    expect(getByTestId("portfolioBtn")).toBeInTheDocument;
+    expect(getByTestId("contactBtn")).toBeInTheDocument;
 });
