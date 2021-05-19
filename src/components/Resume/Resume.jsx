@@ -1,153 +1,64 @@
-import React, { Component } from "react";
+import React from "react";
 import { StyledResume } from "./Resume.styled";
+import Header from "./Header";
+import Experience from "./Experience";
 import portrait from "../../resources/img/portrait.png";
-class Resume extends Component {
-    render() {
-        return (
-            <StyledResume className="has-shadow light-bg">
-                <div className="grid-container">
-                    <img src={portrait} alt="portrait"></img>
-                </div>
-                <div className="grid-container">
-                    <div className="grid-item">👋&nbsp;Elias Peteri</div>
-                    <div className="grid-item">📌&nbsp;Tampere, Finland</div>
-                    <div className="grid-item">
-                        <a href="mailto:elias.peteri@tuni.fi">
-                            📯&nbsp;elias.peteri@tuni.fi
-                        </a>
-                    </div>
-                    <div className="grid-item">
-                        <a href="https://www.github.com/eliaspeteri">
-                            🤓&nbsp;GitHub
-                        </a>
-                    </div>
-                    <div className="grid-item">
-                        <a href="https//www.linkedin.com/in/eliaspeteri">
-                            👔&nbsp;LinkedIn
-                        </a>
-                    </div>
-                </div>
-                <div className="grid-container">
-                    <h1>Education</h1>
-                </div>
-                <div className="grid-container"></div>
-                <div className="grid-container">Aug 2018 - May 2022</div>
-                <div className="grid-container">
-                    <div className="grid-item">
-                        Tampere University of Applied Sciences
-                    </div>
-                    <div className="grid-item">
-                        <em>Bachelor of ICT Engineering</em>
-                    </div>
-                    <div className="grid-item">
-                        Major in Software Engineering
-                    </div>
-                    <ul>
-                        <li className="grid-item">
-                            Object-Oriented Programming
-                        </li>
-                        <li className="grid-item">
-                            Data Structures and Algorithms
-                        </li>
-                        <li className="grid-item">Operating Systems</li>
-                        <li className="grid-item">Databases</li>
-                    </ul>
-                </div>
-                <div className="grid-container">Aug 2014 - May 2018</div>
-                <div className="grid-container">
-                    <div className="grid-item">
-                        Sammon keskuslukio Central High School
-                    </div>
-                    <div className="grid-item">
-                        <em>Major in Media Studies</em>
-                    </div>
-                </div>
-                <div className="grid-container">
-                    <h1>Experience</h1>
-                </div>
-                <div className="grid-container"></div>
-                <div className="grid-container">May 2019 - Jul 2019</div>
-                <div className="grid-container">
-                    <div className="grid-item">City of Tampere</div>
-                    <div className="grid-item">
-                        <em>Office Employee</em>
-                    </div>
-                    <div className="grid-item">
-                        Preparing visit lists and providing support for elderly
-                        home care nurses.
-                    </div>
-                </div>
-                <div className="grid-container">Nov 2018 - Present</div>
-                <div className="grid-container">
-                    <div className="grid-item">Mielen Ry</div>
-                    <div className="grid-item">
-                        <em>Volunteer</em>
-                    </div>
-                    <div className="grid-item">
-                        Facilitating hangouts for people with difficulties
-                        leaving their residence.
-                    </div>
-                </div>
-                <div className="grid-container">
-                    <h1>Skills</h1>
-                </div>
-                <div className="grid-container"></div>
-                <div className="grid-container">Software</div>
-                <div className="grid-container inner">
-                    <div className="grid-item">Visual Studio Code</div>
-                    <div className="grid-item">Microsoft Office Suite</div>
-                    <div className="grid-item">Google Docs</div>
-                    <div className="grid-item">Zoom</div>
-                </div>
-                <div className="grid-container">Languages</div>
-                <div className="grid-container inner">
-                    <div className="grid-item">CSS/HTML</div>
-                    <div className="grid-item">JS</div>
-                    <div className="grid-item">Jest</div>
-                    <div className="grid-item">SQL</div>
-                    <div className="grid-item">Python</div>
-                    <div className="grid-item">Shell</div>
-                </div>
-                <div className="grid-container">Frameworks and Libraries</div>
-                <div className="grid-container inner">
-                    <div className="grid-item">React</div>
-                    <div className="grid-item">Node.js</div>
-                    <div className="grid-item">Express</div>
-                    <div className="grid-item">Axios</div>
-                    <div className="grid-item">Beautiful Soup</div>
-                    <div className="grid-item">Requests</div>
-                </div>
-                <div className="grid-container">
-                    <h1>Languages</h1>
-                </div>
-                <div className="grid-container"></div>
-                <div className="grid-container">Professional or Native</div>
-                <div className="grid-container inner">
-                    <div className="grid-item">Finnish</div>
-                    <div className="grid-item">English</div>
-                </div>
-                <div className="grid-container">Basics</div>
-                <div className="grid-container inner">
-                    <div className="grid-item">Swedish</div>
-                    <div className="grid-item">German</div>
-                </div>
-                <div className="grid-container">Keywords</div>
-                <div className="grid-container inner">
-                    <div className="grid-item">XML, JSON, CSV, YML</div>
-                    <div className="grid-item">REST API</div>
-                    <div className="grid-item">Responsive design</div>
-                    <div className="grid-item">Critical thinking</div>
-                    <div className="grid-item">Teamwork oriented</div>
-                    <div className="grid-item">Analytical skills</div>
-                    <div className="grid-item">Decision-making</div>
-                    <div className="grid-item">Reliability</div>
-                    <div className="grid-item">Motivated</div>
-                    <div className="grid-item">Potential</div>
-                    <div className="grid-item">Always learning</div>
-                </div>
-            </StyledResume>
-        );
-    }
-}
+import List from "./List";
+import Education from "./Education";
+import ContactInfo from "./ContactInfo";
+import education from "../../resources/data/education.json";
+import experience from "../../resources/data/experience.json";
+import skills from "../../resources/data/skills.json";
+import keywords from "../../resources/data/keywords.json";
+import languages from "../../resources/data/languages.json";
+const Resume = () => {
+    return (
+        <StyledResume className="has-shadow light-bg">
+            <div className="grid-container">
+                <img src={portrait} alt="portrait"></img>
+            </div>
+            {/* Contact Information */}
+            <ContactInfo
+                name="Elias Peteri"
+                location="Tampere, Finland"
+                email="elias.peteri@tuni.fi"
+                gitHub="https://github.com/eliaspeteri"
+                linkedIn="https://linkedin.com/in/eliaspeteri"
+            />
+            {/* Education */}
+            <Header message="Education" />
+            {education.schools.map((item) => (
+                <Education
+                    date={item.date}
+                    school={item.school}
+                    program={item.program}
+                    major={item.major}
+                    details={item.details}
+                />
+            ))}
+            {/* Experience */}
+            <Header message="Experience" />
+            {experience.workplaces.map((item) => (
+                <Experience
+                    date={item.date}
+                    location={item.location}
+                    position={item.position}
+                    details={item.details}
+                />
+            ))}
+            {/* Skills */}
+            <Header message="Skills" />
+            {skills.skillset.map((item) => (
+                <List header={item.header} items={item.skills} />
+            ))}
+            {/* Languages */}
+            <Header message="Languages" />
+            {languages.languageset.map((item) => (
+                <List header={item.header} items={item.languages} />
+            ))}
+            <List header={keywords.header} items={keywords.keywords} />
+        </StyledResume>
+    );
+};
 
 export default Resume;
