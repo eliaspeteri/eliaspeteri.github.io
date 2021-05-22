@@ -10,6 +10,7 @@
 
 # production
 /build
+/public
 asset-manifest.json
 favicon.ico
 manifest.json
