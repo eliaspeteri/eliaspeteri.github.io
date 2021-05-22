@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import StyledHome from "./Home.styled";
-
-const data = require("./hello.json");
+import data from "../../resources/data/hello.json";
 
 const Home = () => {
   const [index, setIndex] = useState(0);

@@ -54,7 +54,7 @@ class Dates extends Component {
             <div className="day-names">
               <b>{weekdays[day]}</b>
             </div>
-            {[...Array(5)].map((_y, week) => (
+            {[...Array(6)].map((_y, week) => (
               <div
                 key={week + day}
                 // If the currently printed date matches today's date, use the date-today class

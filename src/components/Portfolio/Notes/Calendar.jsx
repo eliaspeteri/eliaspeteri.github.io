@@ -12,27 +12,6 @@ import {
 import Dates from "./Dates";
 
 class Calendar extends Component {
-  static parseWeekday(date) {
-    switch (getDay(date)) {
-      case 0:
-        return "Sunday";
-      case 1:
-        return "Monday";
-      case 2:
-        return "Tuesday";
-      case 3:
-        return "Wednesday";
-      case 4:
-        return "Thursday";
-      case 5:
-        return "Friday";
-      case 6:
-        return "Saturday";
-      default:
-        return "Unknown weekday";
-    }
-  }
-
   constructor() {
     super();
     this.state = {
@@ -60,6 +39,28 @@ class Calendar extends Component {
     } else if (move === "today") {
       const { today } = this.state;
       this.setState({ viewDate: today });
+    }
+  }
+
+  // eslint-disable-next-line class-methods-use-this
+  parseWeekday(date) {
+    switch (getDay(date)) {
+      case 0:
+        return "Sunday";
+      case 1:
+        return "Monday";
+      case 2:
+        return "Tuesday";
+      case 3:
+        return "Wednesday";
+      case 4:
+        return "Thursday";
+      case 5:
+        return "Friday";
+      case 6:
+        return "Saturday";
+      default:
+        return "Unknown weekday";
     }
   }
 
@@ -107,7 +108,10 @@ class Calendar extends Component {
           </button>
         </header>
         <Dates date={viewDate} />
-        <em>Built with date-fns</em>
+        <span>
+          {/* eslint-disable-next-line react/jsx-one-expression-per-line */}
+          <em>Built with date-fns and React </em>⚛
+        </span>
       </div>
     );
   }

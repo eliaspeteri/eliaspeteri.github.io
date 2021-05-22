@@ -7,8 +7,8 @@ import {
 } from "react-router-dom";
 import React from "react";
 import StyledPortfolio from "./Portfolio.styled";
-import Mandelbrot from "./Mandelbrot";
-import ShoppingCart from "./ShoppingCart";
+// import Mandelbrot from "./Mandelbrot";
+// import ShoppingCart from "./ShoppingCart";
 import Calendar from "./Notes/Calendar";
 import ErrorBoundary from "../ErrorBoundary";
 
@@ -17,10 +17,10 @@ const Project = () => {
   switch (projectId) {
     case "notes":
       return <Calendar />;
-    case "shoppingcart":
-      return <ShoppingCart />;
-    case "mandelbrot":
-      return <Mandelbrot />;
+    // case "shoppingcart":
+    //   return <ShoppingCart />;
+    // case "mandelbrot":
+    //   return <Mandelbrot />;
     default:
       return (
         <p>
@@ -68,12 +68,12 @@ const Portfolio = () => {
       </div>
       <h2 data-testid="smallProjectElement">Small example projects</h2>
       <div className="grid-container">
-        <Link to={`${match.url}/mandelbrot`} className="grid-item">
+        {/* <Link to={`${match.url}/mandelbrot`} className="grid-item">
           Mandelbrot
-        </Link>
-        <Link to={`${match.url}/shoppingcart`} className="grid-item">
+        </Link> */}
+        {/* <Link to={`${match.url}/shoppingcart`} className="grid-item">
           Shopping cart
-        </Link>
+        </Link> */}
       </div>
       <h2 data-testid="bigProjectElement">Bigger example projects</h2>
       <div className="grid-container">

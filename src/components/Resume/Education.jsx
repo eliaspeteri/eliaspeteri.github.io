@@ -1,5 +1,5 @@
 import React from "react";
-import { string } from "prop-types";
+import { string, array } from "prop-types";
 
 // eslint-disable-next-line object-curly-newline
 const Education = ({ date, school, program, major, details }) => (
@@ -12,7 +12,7 @@ const Education = ({ date, school, program, major, details }) => (
       <div className="grid-item">{program}</div>
       <div className="grid-item">
         <em>
-          Major in
+          Major in&nbsp;
           {major}
         </em>
       </div>
@@ -20,7 +20,9 @@ const Education = ({ date, school, program, major, details }) => (
       {details ? (
         <ul>
           {details.map((item) => (
-            <li className="grid-item">{item}</li>
+            <li key={item} className="grid-item">
+              {item}
+            </li>
           ))}
         </ul>
       ) : null}
@@ -33,7 +35,11 @@ export default Education;
 Education.propTypes = {
   date: string.isRequired,
   school: string.isRequired,
-  program: string.isRequired,
+  program: string,
   major: string.isRequired,
-  details: string.isRequired,
+  details: array.isRequired,
+};
+
+Education.defaultProps = {
+  program: "",
 };

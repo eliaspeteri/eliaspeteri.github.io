@@ -3,10 +3,12 @@ import { string, array } from "prop-types";
 
 const List = ({ header, items }) => (
   <>
-    {header}
+    <div className="grid-container">{header}</div>
     <div className="grid-container inner">
       {items.map((skill) => (
-        <div className="grid-item">{skill}</div>
+        <div key={skill} className="grid-item">
+          {skill}
+        </div>
       ))}
     </div>
   </>
