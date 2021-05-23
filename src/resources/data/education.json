@@ -1,25 +1,25 @@
 {
-    "schools": [
-        {
-            "date": "Aug 2018 - May 2022",
-            "school": "Tampere University of Applied Sciences",
-            "program": "Bachelor of Engineering",
-            "major": "Computer Software Engineering",
-            "details": [
-                "Object-Oriented Programming",
-                "Data Structures and Algorithms",
-                "Operating Systems",
-                "Databases",
-                "Software Production"
-            ]
-        },
-        {
-            "date": "Aug 2014 - May 2018",
-            "school": "Sammon keskuslukio Central High School",
-            "major": "Media Studies",
-            "details": [
-                "Assistant for assigning, assembling and managing school events, 2014-2016"
-            ]
-        }
-    ]
+  "schools": [
+    {
+      "date": "Aug 2018 - May 2022",
+      "school": "Tampere University of Applied Sciences",
+      "program": "Bachelor of Engineering",
+      "major": "Computer Software Engineering",
+      "details": [
+        "Object-Oriented Programming",
+        "Data Structures and Algorithms",
+        "Operating Systems",
+        "Databases",
+        "Software Production"
+      ]
+    },
+    {
+      "date": "Aug 2014 - May 2018",
+      "school": "Sammon keskuslukio Central High School",
+      "major": "Media Studies",
+      "details": [
+        "Assistant for assigning, assembling and managing school events, 2014-2016"
+      ]
+    }
+  ]
 }

@@ -1,63 +1,63 @@
 #dates-container {
-    padding: 2%;
-    padding-top: 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  padding: 2%;
+  padding-top: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
 .weekdays {
-    display: grid;
-    grid-template-rows: 0.1fr 0.15fr 0.15fr 0.15fr 0.15fr 0.15fr 0.15fr;
+  display: grid;
+  grid-template-rows: 0.1fr 0.15fr 0.15fr 0.15fr 0.15fr 0.15fr 0.15fr;
 }
 
 .day-names {
-    font-size: 100%;
-    letter-spacing: 0.5px;
-    display: flex;
-    justify-content: center; /*horizontal align*/
-    align-items: center; /*vertical align*/
+  font-size: 100%;
+  letter-spacing: 0.5px;
+  display: flex;
+  justify-content: center; /*horizontal align*/
+  align-items: center; /*vertical align*/
 }
 
 .date,
 .date-today,
 .date-different-month {
-    padding: 1%;
-    padding-left: 3%;
-    font-size: 130%;
-    font-family: Helvetica-Neue-Light;
-    cursor: pointer;
-    border: 1px solid black;
-    user-select: none;
-    /* overflow: hidden; */
+  padding: 1%;
+  padding-left: 3%;
+  font-size: 130%;
+  font-family: Helvetica-Neue-Light;
+  cursor: pointer;
+  border: 1px solid black;
+  user-select: none;
+  /* overflow: hidden; */
 }
 .date:hover {
-    background-color: #dddddd;
+  background-color: #dddddd;
 }
 .date:active {
-    background-color: #cccccc;
+  background-color: #cccccc;
 }
 .date-today {
-    background: lightblue;
+  background: lightblue;
 }
 .date-today:hover {
-    background: rgb(119, 189, 212);
+  background: rgb(119, 189, 212);
 }
 .date-today:active {
-    background: rgb(106, 172, 194);
+  background: rgb(106, 172, 194);
 }
 .date {
-    background: gray;
+  background: gray;
 }
 .date-different-month:hover {
-    background: rgb(114, 114, 114);
+  background: rgb(114, 114, 114);
 }
 .date-different-month:active {
-    background: rgb(95, 95, 95);
+  background: rgb(95, 95, 95);
 }
 
 .calendar-event {
-    color: #363636;
-    font-size: 45%;
-    margin: 0;
-    word-break: break-all;
+  color: #363636;
+  font-size: 45%;
+  margin: 0;
+  word-break: break-all;
 }

@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components";
-export const GlobalStyles = createGlobalStyle`
+
+export default createGlobalStyle`
   html, body {
     margin: 0;
     padding: 0;
@@ -53,15 +54,15 @@ export const GlobalStyles = createGlobalStyle`
   footer {
     background-color: black;
     position:fixed;
-    padding: 0.5rem;
     bottom:0rem;
     right:0rem;
     left: 0rem;
   }
   footer img {
       position:relative;
-      bottom: 0.25rem;
-      width: 3rem;
+      top: 0.5rem;
+      padding-bottom: 0.25rem;
+      width: 2.5rem;
       height: auto;
       padding-right: 1rem;
   }
