@@ -17,15 +17,18 @@ const Blogs = () => {
     });
   }, []);
 
-  return blogs.map((blog) => (
-    <Blog
-      key={blog.id}
-      date={blog.date.slice(0, 10)}
-      author={blog.author}
-      title={blog.title}
-      content={blog.content}
-    />
-  ));
+  if (blogs.length > 0) {
+    return blogs.map((blog) => (
+      <Blog
+        key={blog.id}
+        date={blog.date.slice(0, 10)}
+        author={blog.author}
+        title={blog.title}
+        content={blog.content}
+      />
+    ));
+  }
+  return null;
 };
 
 export default Blogs;
