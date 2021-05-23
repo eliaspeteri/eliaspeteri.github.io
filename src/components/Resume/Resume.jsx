@@ -2,6 +2,7 @@
 /* eslint-disable indent */
 /* eslint-disable react/jsx-indent */
 import React, { useEffect, useState } from "react";
+import DocumentTitle from "react-document-title";
 import StyledResume from "./Resume.styled";
 import Header from "../Header";
 import Experience from "./Experience";
@@ -67,61 +68,66 @@ const Resume = () => {
 
   // eslint-disable-next-line react/jsx-indent
   return (
-    <StyledResume data-testid="resumeComponent" className="has-shadow light-bg">
-      <div className="grid-container">
-        <img src={portrait} alt="portrait" className="has-shadow" />
-      </div>
-      {/* Contact Information */}
-      <ContactInfo
-        name="Elias Peteri"
-        location="Tampere, Finland"
-        email="elias.peteri@tuni.fi"
-        gitHub="https://github.com/eliaspeteri"
-        linkedIn="https://linkedin.com/in/eliaspeteri"
-      />
-      {/* Education */}
-      <Header message="Education" />
-      {education.length > 0
-        ? education.map((item) => (
-            <Education
-              key={item.id}
-              date={item.date}
-              school={item.school}
-              program={item.program}
-              major={item.major}
-              details={item.details}
-            />
-          ))
-        : null}
-      {/* Experience */}
-      <Header message="Experience" />
-      {experience.length > 0
-        ? experience.map((item) => (
-            <Experience
-              key={item.id}
-              date={item.date}
-              location={item.location}
-              position={item.position}
-              details={item.details}
-            />
-          ))
-        : null}
-      {/* Skills */}
-      <Header message="Skills" />
-      {skills.length > 0
-        ? skills.map((item) => (
-            <List key={item.id} header={item.header} items={item.skills} />
-          ))
-        : null}
-      {/* Languages */}
-      <Header message="Languages" />
-      {languages.length > 0
-        ? languages.map((item) => (
-            <List key={item.id} header={item.header} items={item.languages} />
-          ))
-        : null}
-      <List header={keywords.header} items={keywords.keywords} />
-    </StyledResume>
+    <DocumentTitle title="Resume">
+      <StyledResume
+        data-testid="resumeComponent"
+        className="has-shadow light-bg"
+      >
+        <div className="grid-container">
+          <img src={portrait} alt="portrait" className="has-shadow" />
+        </div>
+        {/* Contact Information */}
+        <ContactInfo
+          name="Elias Peteri"
+          location="Tampere, Finland"
+          email="elias.peteri@tuni.fi"
+          gitHub="https://github.com/eliaspeteri"
+          linkedIn="https://linkedin.com/in/eliaspeteri"
+        />
+        {/* Education */}
+        <Header message="Education" />
+        {education.length > 0
+          ? education.map((item) => (
+              <Education
+                key={item.id}
+                date={item.date}
+                school={item.school}
+                program={item.program}
+                major={item.major}
+                details={item.details}
+              />
+            ))
+          : null}
+        {/* Experience */}
+        <Header message="Experience" />
+        {experience.length > 0
+          ? experience.map((item) => (
+              <Experience
+                key={item.id}
+                date={item.date}
+                location={item.location}
+                position={item.position}
+                details={item.details}
+              />
+            ))
+          : null}
+        {/* Skills */}
+        <Header message="Skills" />
+        {skills.length > 0
+          ? skills.map((item) => (
+              <List key={item.id} header={item.header} items={item.skills} />
+            ))
+          : null}
+        {/* Languages */}
+        <Header message="Languages" />
+        {languages.length > 0
+          ? languages.map((item) => (
+              <List key={item.id} header={item.header} items={item.languages} />
+            ))
+          : null}
+        <List header={keywords.header} items={keywords.keywords} />
+      </StyledResume>
+    </DocumentTitle>
   );
 };
 

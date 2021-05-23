@@ -1,9 +1,10 @@
 import React from "react";
+import DocumentTitle from "react-document-title";
 import StyledAbout from "./About.styled";
 
 const About = () => (
-  <StyledAbout data-testid="aboutComponent" className="has-shadow light-bg">
-    <>
+  <DocumentTitle title="About">
+    <StyledAbout data-testid="aboutComponent" className="has-shadow light-bg">
       <h2>About me</h2>
       <p>
         Young and springy ICT Engineering student working on his Bachelor&apos;s
@@ -20,8 +21,8 @@ const About = () => (
           perhaps a thesis!
         </b>
       </p>
-    </>
-  </StyledAbout>
+    </StyledAbout>
+  </DocumentTitle>
 );
 
 export default About;

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import DocumentTitle from "react-document-title";
 import StyledHome from "./Home.styled";
 import data from "../../resources/data/hello.json";
 
@@ -13,9 +14,11 @@ const Home = () => {
   }, []);
 
   return (
-    <StyledHome>
-      <span>{data[index].hello}</span>
-    </StyledHome>
+    <DocumentTitle title="Home">
+      <StyledHome>
+        <span>{data[index].hello}</span>
+      </StyledHome>
+    </DocumentTitle>
   );
 };
 

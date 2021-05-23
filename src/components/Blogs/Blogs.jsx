@@ -1,5 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
+import DocumentTitle from "react-document-title";
 import useResource from "../../hooks/useResource";
 import Blog from "./Blog";
 
@@ -18,17 +19,23 @@ const Blogs = () => {
   }, []);
 
   if (blogs.length > 0) {
-    return blogs.map((blog) => (
-      <Blog
-        key={blog.id}
-        date={blog.date.slice(0, 10)}
-        author={blog.author}
-        title={blog.title}
-        content={blog.content}
-      />
-    ));
+    return (
+      <DocumentTitle title="Blog">
+        <>
+          {blogs.map((blog) => (
+            <Blog
+              key={blog.id}
+              date={blog.date.slice(0, 10)}
+              author={blog.author}
+              title={blog.title}
+              content={blog.content}
+            />
+          ))}
+        </>
+      </DocumentTitle>
+    );
   }
-  return null;
+  return <DocumentTitle title="Loading blog...">{null}</DocumentTitle>;
 };
 
 export default Blogs;
