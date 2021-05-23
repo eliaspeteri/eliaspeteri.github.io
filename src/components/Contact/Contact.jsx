@@ -6,7 +6,7 @@ const Contact = () => (
   <StyledContact data-testid="contactComponent" className="has-shadow">
     <div className="grid-container">
       <div className="grid-item">
-        <img src={portrait} alt="portrait" />
+        <img src={portrait} alt="portrait" className="has-shadow" />
       </div>
       <div className="grid-item">
         <h3>Contact information</h3>

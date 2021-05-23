@@ -3,14 +3,15 @@ import { Switch, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import GlobalStyles from "./styles/global";
 import theme from "./styles/theme";
+// eslint-disable-next-line object-curly-newline
 import {
   Navbar,
   Home,
-  Resume,
   About,
   Portfolio,
   Contact,
   Footer,
+  Resume,
 } from "./components";
 
 function App() {
