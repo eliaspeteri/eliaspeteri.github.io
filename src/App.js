@@ -5,13 +5,14 @@ import GlobalStyles from "./styles/global";
 import theme from "./styles/theme";
 // eslint-disable-next-line object-curly-newline
 import {
-  Navbar,
-  Home,
   About,
-  Portfolio,
+  Blogs,
   Contact,
   Footer,
+  Home,
+  Navbar,
   Resume,
+  Portfolio,
 } from "./components";
 
 function App() {
@@ -32,6 +33,9 @@ function App() {
           </Route>
           <Route path="/contact">
             <Contact />
+          </Route>
+          <Route path="/blogs">
+            <Blogs />
           </Route>
           <Route path="/">
             <Home />

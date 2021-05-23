@@ -43,6 +43,9 @@ const Navbar = () => (
       <NavLink to="/contact" data-testid="contactBtn">
         Contact
       </NavLink>
+      <NavLink to="/blogs" data-testid="blogBtn">
+        Blog
+      </NavLink>
     </nav>
   </StyledNavbar>
 );

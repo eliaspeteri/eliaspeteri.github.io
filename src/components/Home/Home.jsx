@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import StyledHome from "./Home.styled";
 import data from "../../resources/data/hello.json";
 
-export default () => {
+const Home = () => {
   const [index, setIndex] = useState(0);
   const randomInteger = () => {
     setIndex(Math.floor(Math.random() * data.length));
@@ -18,3 +18,5 @@ export default () => {
     </StyledHome>
   );
 };
+
+export default Home;

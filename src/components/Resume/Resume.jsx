@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable indent */
 /* eslint-disable react/jsx-indent */
 import React, { useEffect, useState } from "react";
@@ -18,11 +19,11 @@ const Resume = () => {
   const keywordService = useResource(`${apiUrl}/keywords`);
   const skillService = useResource(`${apiUrl}/skills`);
   const languageService = useResource(`${apiUrl}/languages`);
-  const [education, setEducation] = useState({});
-  const [experience, setExperience] = useState({});
-  const [keywords, setKeywords] = useState({});
-  const [skills, setSkills] = useState({});
-  const [languages, setLanguages] = useState({});
+  const [education, setEducation] = useState([]);
+  const [experience, setExperience] = useState([]);
+  const [keywords, setKeywords] = useState([]);
+  const [skills, setSkills] = useState([]);
+  const [languages, setLanguages] = useState([]);
 
   useEffect(() => {
     educationService.getAll().then((response) => {
