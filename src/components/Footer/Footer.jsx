@@ -1,5 +1,5 @@
 import React from "react";
-import linkedin from "../resources/img/linkedin.png";
+import linkedin from "../../resources/img/linkedin.png";
 
 const Footer = () => (
   <footer>
