@@ -66,7 +66,6 @@ const Resume = () => {
     });
   }, []);
 
-  // eslint-disable-next-line react/jsx-indent
   return (
     <DocumentTitle title="Resume">
       <StyledResume
@@ -125,7 +124,10 @@ const Resume = () => {
               <List key={item.id} header={item.header} items={item.languages} />
             ))
           : null}
-        <List header={keywords.header} items={keywords.keywords} />
+        {/* Keywords */}
+        {keywords.length > 0
+          ? <List header={keywords.header} items={keywords[0].keywords} />
+          : null}
       </StyledResume>
     </DocumentTitle>
   );

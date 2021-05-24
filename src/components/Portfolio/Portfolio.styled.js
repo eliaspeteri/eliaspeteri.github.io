@@ -12,7 +12,7 @@ export default styled.div`
   }
   z-index: 1;
   .grid-container {
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto;
     display: inline-grid;
     font-size: 2rem;
   }

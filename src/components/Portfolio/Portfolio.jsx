@@ -43,7 +43,7 @@ const Portfolio = () => {
           Close all
         </Link>
 
-        <h2 data-testid="githubElement">GitHub</h2>
+        <h1 data-testid="githubElement">GitHub</h1>
         <div className="grid-container">
           <a href="https://github.com/eliaspeteri/notes" className="grid-item">
             Notes
@@ -71,7 +71,7 @@ const Portfolio = () => {
             Full Stack Course
           </a>
         </div>
-        <h2 data-testid="smallProjectElement">Small example projects</h2>
+        <h1 data-testid="smallProjectElement">Small example projects</h1>
         <div className="grid-container">
           {/* <Link to={`${match.url}/mandelbrot`} className="grid-item">
           Mandelbrot
@@ -80,7 +80,7 @@ const Portfolio = () => {
           Shopping cart
         </Link> */}
         </div>
-        <h2 data-testid="bigProjectElement">Bigger example projects</h2>
+        <h1 data-testid="bigProjectElement">Bigger example projects</h1>
         <div className="grid-container">
           <Link to={`${match.url}/notes`} className="grid-item">
             Calendar
