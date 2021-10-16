@@ -35,7 +35,11 @@ const Blogs = () => {
       </DocumentTitle>
     );
   }
-  return <DocumentTitle title="Loading blog...">{null}</DocumentTitle>;
+  return (
+    <DocumentTitle title="Loading blog...">
+      <>Loading blogposts, please wait...</>
+    </DocumentTitle>
+  );
 };
 
 export default Blogs;
